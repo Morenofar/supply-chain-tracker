@@ -93,7 +93,8 @@ Antes de comenzar, asegúrate de tener instalado:
 
 #### 1. **Clonar el Repositorio**
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone 98_pfm_traza_2025
+
 cd supply-chain-tracker
 ```
 
@@ -316,7 +317,7 @@ graph TD
 ### 2. **Creación de Token**
 ```mermaid
 graph TD
-    A[Usuario Aprobado] --> B[/tokens/create]
+    A[Usuario Aprobado] --> B["Crear Token"]
     B --> C{Rol}
     C -->|Producer| D[Token Materia Prima]
     C -->|Factory| E[Seleccionar Parent Token]
@@ -330,7 +331,7 @@ graph TD
 ### 3. **Transferencia**
 ```mermaid
 graph TD
-    A[Propietario Token] --> B[/tokens/[id]/transfer]
+    A[Propietario Token] --> B["Transferir Token"]
     B --> C[Seleccionar Destinatario]
     C --> D[Especificar Cantidad]
     D --> E[Enviar Transferencia]
