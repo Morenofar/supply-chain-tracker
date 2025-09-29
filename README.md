@@ -17,9 +17,10 @@
 
 1. Uso de la Inteligencia Artificial para el desarrollo del proyecto.
 2. Retrospectiva del uso de la IA. (HACER UN FICHERO IA.md)
-   2.1. IA usadas
-   2.2. Tiempo consumido aproximado separando el smart contract y el frontend.
-   2.3. Errores mas habituales analizando los chats de la IA..
+2.1. IA usadas
+2.2. Tiempo consumido aproximado separando el smart contract y el frontend.
+2.3. Errores mas habituales analizando los chats de la IA.
+2.4. Ficheros de los chat de la IA.
 3. Construccion de un MCP que envuelva los cli de foundry anvil, cast, forge.
 4. Opcional. Manejo del contrato inteligente en la aplicacion con la IA.
 
