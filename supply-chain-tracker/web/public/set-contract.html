@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actualizar Contrato</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .container {
+      background: #2a2a2a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: #4ade80;
+      margin-top: 0;
+    }
+    .address {
+      font-family: monospace;
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-size: 14px;
+      word-break: break-all;
+    }
+    button {
+      background: #4ade80;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #22c55e;
+    }
+    .success {
+      background: #166534;
+      border: 1px solid #4ade80;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: none;
+    }
+    .info {
+      background: #1e40af;
+      border: 1px solid #60a5fa;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔄 Actualizar Dirección del Contrato</h1>
+    
+    <p>Esta página configurará automáticamente la dirección del contrato desplegado en tu navegador.</p>
+    
+    <div class="info">
+      <strong>📍 Contrato Desplegado:</strong>
+      <div class="address" id="contract-address">0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512</div>
+      <p style="margin: 10px 0 0 0; font-size: 12px; color: #aaa;">
+        Desplegado el 26 Oct 2025 con usuarios y tokens pre-cargados
+      </p>
+    </div>
+    
+    <div class="info">
+      <strong>✅ Usuarios Pre-registrados:</strong>
+      <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+        <li>Producer1, Producer2, Producer3</li>
+        <li>Factory1, Factory2</li>
+        <li>Retailer, Consumer1</li>
+      </ul>
+    </div>
+    
+    <div class="info">
+      <strong>📦 Tokens Pre-creados:</strong>
+      <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+        <li>[1] Tomates 1000kg (Producer1)</li>
+        <li>[2] Calabacines 1000kg (Producer1)</li>
+        <li>[3] Cebollas 1000kg (Producer2)</li>
+      </ul>
+    </div>
+    
+    <button onclick="setupContract()">Configurar y Abrir DApp</button>
+    
+    <div class="success" id="success">
+      <strong>✅ ¡Configuración Exitosa!</strong>
+      <p style="margin: 10px 0 0 0;">Redirigiendo a la DApp...</p>
+    </div>
+  </div>
+
+  <script>
+    function setupContract() {
+      const contractAddress = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512';
+      const adminAddress = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
+      
+      console.log('🔧 Configurando contrato...');
+      console.log('📍 Dirección:', contractAddress);
+      
+      // Limpiar localStorage
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      console.log('✅ localStorage limpiado');
+      
+      // Configurar deploy info en el formato que espera la DApp
+      const deployInfo = {
+        contractAddress: contractAddress,
+        adminAddress: adminAddress,
+        timestamp: Date.now()
+      };
+      
+      localStorage.setItem('deployInfo', JSON.stringify(deployInfo));
+      console.log('✅ Deploy info guardado:', deployInfo);
+      
+      // Mostrar mensaje de éxito
+      document.getElementById('success').style.display = 'block';
+      
+      console.log('🔄 Redirigiendo a la DApp...');
+      
+      // Redirigir después de 1.5 segundos
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
+
