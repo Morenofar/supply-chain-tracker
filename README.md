@@ -10,14 +10,32 @@
 
 ## ✅ Estado: 100% COMPLETADO (28 Oct 2025)
 
-**Supply Chain Tracker** es un sistema completo de trazabilidad basado en blockchain (ERC-1155) con una DApp moderna que permite rastrear productos desde materias primas hasta el consumidor final.
+**Supply Chain Tracker** es un sistema completo de trazabilidad basado en blockchain con una DApp moderna que permite rastrear productos desde materias primas hasta el consumidor final.
+
+### ⛓️ **Tecnología Blockchain: ERC-1155**
+
+Este proyecto utiliza el estándar **ERC-1155** (Multi-Token Standard) para la gestión de tokens en blockchain:
+
+**🎯 ¿Por qué ERC-1155?**
+- ✅ **Multi-Token**: Gestiona múltiples tipos de tokens en un solo contrato
+- ✅ **Eficiencia de Gas**: Hasta 90% más eficiente que ERC-721 en transferencias batch
+- ✅ **Flexibilidad**: Soporta tanto tokens fungibles como no fungibles
+- ✅ **Trazabilidad**: Ideal para cadenas de suministro con múltiples productos
+- ✅ **Estándar de OpenZeppelin**: Seguro y auditado
+
+**📦 Implementación en el Proyecto:**
+- Contrato base: `ERC1155` de OpenZeppelin
+- Tokens únicos para cada lote de productos
+- Balance tracking automático por usuario
+- Transferencias seguras con aprobación bidireccional
+- Metadatos extensibles por token
 
 ### 🎉 Implementación Completada:
-- ✅ Smart Contract optimizado (27-31% ahorro de gas)
+- ✅ **Smart Contract ERC-1155** optimizado (27-31% ahorro de gas)
 - ✅ DApp Frontend completa (Next.js 14 + TypeScript)
 - ✅ Sistema de autenticación con MetaMask
 - ✅ Gestión de usuarios por roles
-- ✅ Creación y gestión de tokens
+- ✅ Creación y gestión de tokens ERC-1155
 - ✅ Sistema de transferencias bidireccional
 - ✅ Panel de administración
 - ✅ 26/26 tests pasando
@@ -204,6 +222,30 @@ Implementacion de referencia. (url )
 - **Función**: Gestiona el sistema y aprueba usuarios
 - **Permisos**: Aprobar/rechazar registros, supervisar el sistema
 - **Nota**: Rol único del creador del contrato
+
+---
+
+## 🛠️ Stack Técnico
+
+### **⛓️ Blockchain & Smart Contracts:**
+- **🔗 ERC-1155** (Multi-Token Standard) - Estándar de OpenZeppelin
+- **⚡ Solidity** 0.8.20+ - Lenguaje de Smart Contracts
+- **🔨 Foundry** - Framework de desarrollo y testing
+- **🧪 Forge** - Testing framework con 26 tests pasando
+- **⚙️ Anvil** - Blockchain local para desarrollo
+
+### **🌐 Frontend & Web3:**
+- **⚛️ Next.js 14** - Framework React con App Router
+- **📘 TypeScript** - Type-safe JavaScript
+- **🦊 Ethers.js** - Biblioteca Web3 para interacción blockchain
+- **🎨 Tailwind CSS** - Estilos utility-first
+- **🎯 Shadcn UI** - Componentes UI modernos
+
+### **🔧 Herramientas de Desarrollo:**
+- **🐙 Git & GitHub** - Control de versiones
+- **📦 npm** - Gestión de paquetes
+- **🔍 ESLint** - Linting de código
+- **🎨 Prettier** - Formateo de código
 
 ---
 
