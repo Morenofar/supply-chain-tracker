@@ -1,6 +1,14 @@
 # 🔗 Supply Chain Tracker - Sistema de Trazabilidad Blockchain
 
-## ✅ Estado: 95% COMPLETADO (26 Oct 2025)
+## 🎬 **VIDEO DEMOSTRACIÓN**
+
+[![Video Demo](https://img.shields.io/badge/🎥_Ver_Demo-Loom-blueviolet?style=for-the-badge)](https://www.loom.com/embed/3aef42be7f834a0a8485dd72778ce58e)
+
+**👉 [VER VIDEO DEMO COMPLETO](https://www.loom.com/embed/3aef42be7f834a0a8485dd72778ce58e)** ⭐
+
+---
+
+## ✅ Estado: 100% COMPLETADO (28 Oct 2025)
 
 **Supply Chain Tracker** es un sistema completo de trazabilidad basado en blockchain (ERC-1155) con una DApp moderna que permite rastrear productos desde materias primas hasta el consumidor final.
 
@@ -13,7 +21,8 @@
 - ✅ Sistema de transferencias bidireccional
 - ✅ Panel de administración
 - ✅ 26/26 tests pasando
-- ✅ Documentación exhaustiva (11 archivos)
+- ✅ Documentación exhaustiva (28 archivos IA)
+- ✅ **[Video Demo Completo](https://www.loom.com/embed/3aef42be7f834a0a8485dd72778ce58e)** 🎬
 
 ### 📖 Documentación Clave:
 - 📄 **`supply-chain-tracker/ESTADO_PROYECTO.md`** - Estado completo y detallado (lee esto primero)
@@ -1200,16 +1209,16 @@ forge script script/DeployAndSetup.s.sol:DeployAndSetup --rpc-url http://127.0.0
 
 
 ### **🎯 ENTREGA FINAL**
-- [ ] **Demo funcionando completamente** 🎉
-- [ ] Repositorio publico con workflow de testing
-- [ ] `.gitignore` correctamente configurado (NO subir node_modules/, lib/, out/)
-- [ ] README con instrucciones de instalación de dependencias
-- [ ] **📋 Documentación de IA incluida:**
-  - [ ] Directorio `supply-chain-tracker/IA/` con 28 archivos
-  - [ ] Informe principal: `IA/INFORME_DESARROLLO_IA.md`
-  - [ ] Índice: `IA/00_INDICE.md`
-  - [ ] Logs de sesiones y proceso completo
-- [ ] Video demo de maximo 5 minutos
+- [x] **Demo funcionando completamente** 🎉
+- [x] Repositorio publico: https://github.com/Morenofar/supply-chain-tracker
+- [x] `.gitignore` correctamente configurado (NO subir node_modules/, lib/, out/)
+- [x] README con instrucciones de instalación de dependencias
+- [x] **📋 Documentación de IA incluida:**
+  - [x] Directorio `supply-chain-tracker/IA/` con 28 archivos
+  - [x] Informe principal: `IA/INFORME_DESARROLLO_IA.md`
+  - [x] Índice: `IA/00_INDICE.md`
+  - [x] Logs de sesiones y proceso completo
+- [x] **Video demo de maximo 5 minutos:** [VER AQUÍ](https://www.loom.com/embed/3aef42be7f834a0a8485dd72778ce58e) 🎬
 - [ ] Verificar que tras clonar, `forge install` y `npm install` funcionan correctamente
 
 
