@@ -1,8 +1,9 @@
 # 📚 ÍNDICE - Documentación de Desarrollo con IA
 
 **Proyecto**: Supply Chain Tracker  
-**Total de Archivos**: 27 documentos  
-**Tamaño Total**: ~300 KB de documentación  
+**Total de Archivos**: 29 documentos  
+**Tamaño Total**: ~320 KB de documentación  
+**Última Actualización**: 29 Octubre 2025  
 
 ---
 
@@ -128,6 +129,9 @@ Implementación del sistema de tokens padre-hijo
 ## 🎨 MEJORAS Y ACTUALIZACIONES
 
 ### UX/UI:
+
+#### **PANEL_ADMIN_TOKENS.md** ⭐ NUEVO (29 Oct 2025)
+Vista completa de tokens y trazabilidad para administradores
 
 #### **MEJORAS_UX_TRANSFERENCIAS.md**
 Mejoras en la experiencia de usuario para transferencias

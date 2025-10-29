@@ -37,9 +37,10 @@ Este proyecto utiliza el estándar **ERC-1155** (Multi-Token Standard) para la g
 - ✅ Gestión de usuarios por roles
 - ✅ Creación y gestión de tokens ERC-1155
 - ✅ Sistema de transferencias bidireccional
-- ✅ Panel de administración
+- ✅ Panel de administración con supervisión de tokens
+- ✅ Vista global de tokens y trazabilidad completa
 - ✅ 26/26 tests pasando
-- ✅ Documentación exhaustiva (28 archivos IA)
+- ✅ Documentación exhaustiva (29 archivos IA)
 - ✅ **[Video Demo Completo](https://www.loom.com/embed/3aef42be7f834a0a8485dd72778ce58e)** 🎬
 
 ### 📖 Documentación Clave:
@@ -51,9 +52,10 @@ Este proyecto utiliza el estándar **ERC-1155** (Multi-Token Standard) para la g
 
 ### 🤖 **Documentación de Desarrollo con IA:**
 - 🎯 **`supply-chain-tracker/IA/INFORME_DESARROLLO_IA.md`** - **INFORME PRINCIPAL** del desarrollo con IA
-- 📚 **`supply-chain-tracker/IA/00_INDICE.md`** - Índice completo de 28 archivos de documentación
+- 📚 **`supply-chain-tracker/IA/00_INDICE.md`** - Índice completo de 29 archivos de documentación
 - ⏱️ **`supply-chain-tracker/IA/SESION_26_OCT_2025.md`** - Log detallado del proceso de desarrollo
-- 📊 **Directorio completo:** `supply-chain-tracker/IA/` **(28 archivos, ~300KB de documentación)**
+- 📦 **`supply-chain-tracker/IA/PANEL_ADMIN_TOKENS.md`** - Panel admin con vista de tokens (NUEVO)
+- 📊 **Directorio completo:** `supply-chain-tracker/IA/` **(29 archivos, ~320KB de documentación)**
 
 ## 🚀 INICIO RÁPIDO - ¡Empezar en 5 minutos!
 
@@ -222,6 +224,21 @@ Implementacion de referencia. (url )
 - **Función**: Gestiona el sistema y aprueba usuarios
 - **Permisos**: Aprobar/rechazar registros, supervisar el sistema
 - **Nota**: Rol único del creador del contrato
+
+**🎯 Funcionalidades del Panel de Admin:**
+- ✅ **Gestión de Usuarios** (`/admin/users`)
+  - Aprobar/rechazar solicitudes de acceso
+  - Cambiar estado de usuarios
+  - Ver estadísticas de usuarios
+- ✅ **Vista Global de Tokens** (`/admin/tokens`) ⭐ NUEVO
+  - Ver todos los tokens del sistema
+  - Estadísticas (total, materias primas, derivados)
+  - Búsqueda por nombre o creador
+  - Acceso a trazabilidad completa de cada token
+- ✅ **Supervisión del Sistema**
+  - Dashboard con métricas en tiempo real
+  - Visualización optimizada para supervisión
+  - Sin mensajes de balance personal (solo información de auditoría)
 
 ---
 

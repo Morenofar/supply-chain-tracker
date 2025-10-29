@@ -35,18 +35,24 @@ export default function TokenDetailPage() {
   const tokenId = params.id as string;
   
   const { walletState } = useWeb3();
-  const { address, isConnected, user } = walletState;
+  const { address, isConnected, user, isAdmin } = walletState;
 
   const [token, setToken] = useState<TokenDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Verificar acceso
+  // Verificar acceso - permitir a usuarios aprobados Y administradores
   useEffect(() => {
-    if (!isConnected || !user || user.status !== 1) {
+    if (!isConnected) {
+      router.push('/');
+      return;
+    }
+    
+    // Permitir acceso a admin O a usuarios con status aprobado
+    if (!isAdmin && (!user || user.status !== 1)) {
       router.push('/dashboard');
     }
-  }, [isConnected, user, router]);
+  }, [isConnected, user, isAdmin, router]);
 
   // Cargar detalles del token
   useEffect(() => {
@@ -115,7 +121,8 @@ export default function TokenDetailPage() {
     loadToken();
   }, [address, tokenId]);
 
-  if (!user) return null;
+  // Permitir renderizado si es admin O si tiene user
+  if (!isAdmin && !user) return null;
 
   // Parse features JSON
   const parsedFeatures = token?.features ? (() => {
@@ -127,7 +134,8 @@ export default function TokenDetailPage() {
   })() : null;
 
   const isOwner = token?.creator.toLowerCase() === address?.toLowerCase();
-  const canTransfer = token && token.balance > 0;
+  // Los administradores no pueden transferir tokens (solo supervisar)
+  const canTransfer = !isAdmin && token && token.balance > 0;
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-6">
@@ -381,8 +389,8 @@ export default function TokenDetailPage() {
             </CardContent>
           </Card>
 
-          {/* Actions */}
-          {token.balance === 0 && (
+          {/* Actions - Solo mostrar advertencia para usuarios normales, no para admin */}
+          {token.balance === 0 && !isAdmin && (
             <Card className="border-yellow-500/20 bg-yellow-500/5">
               <CardContent className="py-6">
                 <div className="flex items-start gap-3">

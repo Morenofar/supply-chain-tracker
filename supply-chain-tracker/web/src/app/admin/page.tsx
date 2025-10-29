@@ -116,18 +116,20 @@ export default function AdminPage() {
           </CardContent>
         </Card>
 
-        <Card className="opacity-50">
+        <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => router.push('/admin/tokens')}>
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
-              <span>Estadísticas del Sistema</span>
+              <span>Ver Todos los Tokens</span>
               <ArrowRight className="h-5 w-5" />
             </CardTitle>
             <CardDescription>
-              Ver métricas de tokens y transferencias
+              Visualizar y tracear todos los tokens del sistema
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">Próximamente</p>
+            <p className="text-sm text-muted-foreground">
+              Vista completa con trazabilidad de cada token
+            </p>
           </CardContent>
         </Card>
       </div>
